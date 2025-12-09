@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-magnifying-glass-chart"></i> Dark Search
+            </div>
+            <button class="add-btn" id="openModalBtn">
+                <i class="fa-solid fa-plus"></i> Add Website
+            </button>
+        </header>
+
+        <section class="search-section">
+            <h1>Discover the Web</h1>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search websites, tools, resources...">
+                <i class="fa-solid fa-search search-icon"></i>
+            </div>
+            <div class="stats-container">
+                <span id="total-sites">0</span> Websites Available
+            </div>
+        </section>
+
+        <main id="websites-grid" class="results-grid">
+            <!-- Websites will be injected here -->
+        </main>
+    </div>
+
+    <!-- Modal for adding website -->
+    <div class="modal" id="addWebsiteModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModalBtn">&times;</button>
+            <h2>Add New Website</h2>
+            <form id="addWebsiteForm">
+                <div class="form-group">
+                    <label for="siteName">Website Name</label>
+                    <input type="text" id="siteName" required placeholder="e.g., Google">
+                </div>
+                <div class="form-group">
+                    <label for="siteUrl">URL</label>
+                    <input type="url" id="siteUrl" required placeholder="https://example.com">
+                </div>
+                <div class="form-group">
+                    <label for="siteDesc">Description</label>
+                    <textarea id="siteDesc" rows="4" required
+                        placeholder="Brief description of the website..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Add Website</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
